@@ -19,7 +19,7 @@ pipeline {
             steps {
                 sh 'docker stop $CONTAINER_NAME || true'
                 sh 'docker rm $CONTAINER_NAME || true'
-                sh 'docker run -d -p 8080:80 --name $CONTAINER_NAME $IMAGE_NAME'
+                sh 'docker run -d -p 8000:80 --name $CONTAINER_NAME $IMAGE_NAME'
             }
         }
     }
